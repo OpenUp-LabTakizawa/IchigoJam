@@ -23,7 +23,15 @@ You can try IchigoJam on the web console of [IchigoJam Web](https://fukuno.jig.j
 
 ### Example Code
 ```
-#
+# turn on LED
+LED1
+
+# turn off LED
+LED0
+
+# print random number
+PRINT RND(10)
+8
 ```
 
 ## Credits
