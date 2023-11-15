@@ -34,6 +34,9 @@ PRINT RND(10)
 8
 ```
 
+## Reference
+[IchigoJam BASIC リファレンス ver 1.4](https://ichigojam.net/IchigoJam.html)
+
 ## Credits
 
 IchigoJam(R)jig.jp
