@@ -17,3 +17,12 @@
 <p align="center">
 Small computer for kids to learn programming!
 </p>
+
+## Credits
+
+IchigoJam(R)jig.jp
+
+## License
+
+The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).
+Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/LICENSE) for more details.
