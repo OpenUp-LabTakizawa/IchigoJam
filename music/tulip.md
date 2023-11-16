@@ -3,5 +3,6 @@
 ## Code
 
 ```
-PLAY "T180 CDER CDER GEDCDED"
+10 'Tulip Song
+20 PLAY "T180 CDER CDER GEDCDED"
 ```
