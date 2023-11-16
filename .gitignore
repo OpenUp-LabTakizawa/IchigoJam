@@ -1,0 +1,7 @@
+slidev/node_modules
+slidev/.DS_Store
+slidev/dist
+slidev/*.local
+slidev/index.html
+slidev/.remote-assets
+slidev/components.d.ts
