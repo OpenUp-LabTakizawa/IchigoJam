@@ -1,22 +1,22 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: /cover.webp   
 class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Robosava mini corner
+  Presentation slides for Hiroshima robosava.
 
-  Learn more at [Sli.dev](https://sli.dev)
+  Learn more at [ロボサバ](https://robosava.jp/)
 drawings:
   persist: false
 transition: slide-left
-title: Welcome to Slidev
+title: 響け、メロディー♪
 mdc: true
 ---
 
-# Welcome to Slidev
+# 響け、メロディー♪
 
 Presentation slides for developers
 
