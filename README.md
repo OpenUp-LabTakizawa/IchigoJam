@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-Small computer for kids to learn programming!
+Small computer for kids to learn programming🍓
 </p>
 
 ## 👦 How to play
