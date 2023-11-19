@@ -8,6 +8,11 @@
   </a>
 </p>
 
+<p align="center">
+  <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/LICENSE">
+    <img alt="" src="https://img.shields.io/github/license/OpenUp-LabTakizawa/IchigoJam?labelColor=000000">
+  </a>
+</p>
 
 <p align="center">
 Small computer for kids to learn programming🍓
