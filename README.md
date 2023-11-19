@@ -18,10 +18,12 @@
 Small computer for kids to learn programming!
 </p>
 
-## How to play
+## 👦 How to play
+
 You can try IchigoJam on the web console of [IchigoJam Web](https://fukuno.jig.jp/app/IchigoJam/).
 
-### Example Code
+### 💡 Example Code
+
 ```
 # turn on LED
 LED1
@@ -34,14 +36,15 @@ PRINT RND(10)
 8
 ```
 
-## Reference
+## 📑 Reference
+
 [IchigoJam BASIC リファレンス ver 1.4](https://ichigojam.net/IchigoJam.html)
 
-## Credits
+## 📦 Credits
 
 IchigoJam(R)jig.jp
 
-## License
+## 📄 License
 
 The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).
 Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/LICENSE) for more details.
