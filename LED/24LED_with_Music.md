@@ -1,0 +1,9 @@
+<h1 align="center">24LED with Music</h1>
+
+## Code
+
+```
+10 '24LEDwithMUSIC
+20 PLAY "$T180 O4 CDER CDER GEDCDED2R T360 O5 ER8ER8E2R ER8ER8E2R E.G.C2 D6E2.R8"
+30 
+'''
