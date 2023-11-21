@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: /cover.webp
+background: /wallpaper.webp
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -41,17 +41,14 @@ mdc: true
 </div>
 
 ---
-layout: image
-image: /head.webp
-class: 
+layout: default
 ---
 
 # 目次
 <Toc class="text-5xl text-black font-bold" maxDepth="1"></Toc>
  
 ---
-layout: image
-image: /content.webp
+layout: default
 ---
 
 # IchigoJam で「ピアノ」を弾こう！
@@ -94,8 +91,7 @@ image: /content.webp
 </div>
 
 ---
-layout: image
-image: /content.webp
+layout: default
 ---
 
 # 次は IchigoJam でメロディーを奏でよう！
@@ -119,8 +115,8 @@ image: /content.webp
 <div class="text-center text-6xl text-black m-2">前奏やサビだけでなく、<br><span class="text-orange">他のところも作ってみよう！</span></div>
 
 ---
-layout: image
-image: /spine.webp
+layout: cover
+image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
 # END
