@@ -10,7 +10,7 @@
 
 <p align="center">
   <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/IchigoJam?style=for-the-badge&labelColor=000000" alt="">
+    <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/IchigoJam?style=for-the-badge&labelColor=000000" alt="License">
   </a>
 </p>
 
