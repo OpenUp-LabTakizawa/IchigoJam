@@ -19,7 +19,7 @@ Small computer for kids to learn programming🍓
 </p>
 
 ## 👦 How to play
-
+aaaa
 You can try IchigoJam on the web console of [IchigoJam Web](https://fukuno.jig.jp/app/IchigoJam/).
 
 ### 💡 Example Code
