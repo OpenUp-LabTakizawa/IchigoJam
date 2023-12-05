@@ -1,0 +1,26 @@
+glass:
+- changed-files:
+  - any-glob-to-any-file: 'glass/**'
+LED:
+- changed-files:
+  - any-glob-to-any-file: 'LED/**'
+music:
+- changed-files:
+  - any-glob-to-any-file: 'music/**'
+slidev:
+- changed-files:
+  - any-glob-to-any-file: 'slidev/**'
+documentation:
+- changed-files:
+  - any-glob-to-any-file: '**/*.md'
+git:
+- changed-files:
+  - any-glob-to-any-file: ['.gitattributes', '.gitignore']
+vscode:
+- changed-files:
+  - any-glob-to-any-file: '.vscode/*'
+ci:
+- changed-files:
+  - any-glob-to-any-file: ['.github/workflows/*.yml', '.github/dependabot.yml']
+enhancement:
+ - head-branch: ['^feature', 'feature', '^enhancement', 'enhancement']
