@@ -16,11 +16,11 @@ documentation:
 git:
 - changed-files:
   - any-glob-to-any-file: ['.gitattributes', '.gitignore']
-vscode:
-- changed-files:
-  - any-glob-to-any-file: '.vscode/*'
 ci:
 - changed-files:
   - any-glob-to-any-file: ['.github/workflows/*.yml', '.github/dependabot.yml']
+vscode:
+- changed-files:
+  - any-glob-to-any-file: '.vscode/*'
 enhancement:
  - head-branch: ['^feature', 'feature', '^enhancement', 'enhancement']
