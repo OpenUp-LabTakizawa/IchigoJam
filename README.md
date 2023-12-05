@@ -7,6 +7,7 @@
     <h1 align="center">IchigoJam</h1>
   </a>
 </p>
+aaaaa
 
 <p align="center">
   <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/LICENSE">
