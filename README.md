@@ -42,8 +42,8 @@ PRINT RND(10)
 
 ## 🫶 Contribute
 
-Want to report a bug, contribute some code, or improve the documentation? Excellent!
-Read up on our guidelines for [contributing][contributing] and [Code of Conduct][coc].
+Want to report a bug, contribute some code, or improve the documentation? Excellent!  
+Read up on our guidelines for [contributing][contributing] and [Code of Conduct][coc].  
 Then check out one of our issues labeled as [help wanted][help] or [good first issue][gfi].
 
 [contributing]: https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/CONTRIBUTING.md
