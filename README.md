@@ -40,27 +40,22 @@ PRINT RND(10)
 
 [IchigoJam BASIC リファレンス ver 1.4](https://ichigojam.net/IchigoJam.html)
 
-## 🤝 Contribute
+## 🫶 Contribute
 
-Here’s how we suggest you go about proposing a change to this project:
+Want to report a bug, contribute some code, or improve the documentation? Excellent!
+Read up on our guidelines for [contributing][contributing] and [Code of Conduct][coc].
+Then check out one of our issues labeled as [help wanted][help] or [good first issue][gfi].
 
-1. [Fork this project][fork] to your account.
-2. [Create a branch][branch] for the change you intend to make.
-3. Make your changes to your fork.
-4. [Send a pull request][pr] from your fork’s branch to our `main` branch.
-
-Using the web-based interface to make changes is fine too, and will help you
-by automatically forking the project and prompting to send a pull request too.
-
-[fork]: https://help.github.com/articles/fork-a-repo/
-[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-[pr]: https://help.github.com/articles/using-pull-requests/
+[contributing]: https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/CONTRIBUTING.md
+[coc]: https://github.com/OpenUp-LabTakizawa/IchigoJam/blob/main/CODE_OF_CONDUCT.md
+[gfi]: https://github.com/OpenUp-LabTakizawa/IchigoJam/labels/good%20first%20issue
+[help]: https://github.com/OpenUp-LabTakizawa/IchigoJam/labels/help%20wanted
 
 ## 📦 Credits
 
 IchigoJam(R)jig.jp
 
-## 📄 License
+## ⚖️ License
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
