@@ -20,3 +20,4 @@ jobs:
       with:
           assignees: HaradaTakayuki,kazutan1230,Marukome0743,tanePON
           numOfAssignee: 1
+          abortIfPreviousAssignees: true
