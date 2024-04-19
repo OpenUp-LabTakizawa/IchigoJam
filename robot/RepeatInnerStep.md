@@ -1,0 +1,10 @@
+<h1 align="center">Repeat Inner Step</h1>
+
+## Code
+
+```
+10 REM REPEAT INNER STEP LED
+20 LED1:PWM 2,145:PWM 4,145:WAIT30
+30 LED0:PWM 2,120:PWM 4,160:WAIT30
+40 GOTO 20
+```
