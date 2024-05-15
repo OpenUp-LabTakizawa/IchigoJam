@@ -38,7 +38,7 @@ PRINT RND(10)
 
 ## 📑 Reference
 
-[IchigoJam BASIC リファレンス ver 1.4](https://ichigojam.net/IchigoJam.html)
+[IchigoJam BASIC リファレンス ver 1.5](https://ichigojam.net/IchigoJam-1.5.html)
 
 ## 🫶 Contribute
 
