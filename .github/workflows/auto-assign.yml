@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
     steps:
     - name: 'Auto-assign issue'
-      uses: pozil/auto-assign-issue@v1
+      uses: pozil/auto-assign-issue@v2
       with:
           assignees: HaradaTakayuki,kazutan1230,Marukome0743,tanePON
           numOfAssignee: 1
