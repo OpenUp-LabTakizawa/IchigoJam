@@ -14,9 +14,7 @@
   </a>
 </p>
 
-<p align="center">
-Small computer for kids to learn programming🍓
-</p>
+<p align="center">Small computer for kids to learn programming🍓</p>
 
 ## 👦 How to play
 

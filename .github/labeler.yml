@@ -18,6 +18,9 @@
 🎼music:
 - changed-files:
   - any-glob-to-any-file: 'music/**'
+🤖robot:
+- changed-files:
+  - any-glob-to-any-file: 'robot/**'
 📽️slidev:
 - changed-files:
   - any-glob-to-any-file: 'slidev/**'
