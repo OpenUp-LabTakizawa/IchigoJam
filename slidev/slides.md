@@ -56,25 +56,22 @@ layout: default
 
   <div class="col-span-2">
     <h2 class="text-green m-2">ピアノのコード</h2>
-    <pre>
-<code class="lang-ichigojam">                           
-10 'PIANO                   
-20 K=INKEY()                
-30 IF K=ASC("Z") PLAY "O4C" 
-40 IF K=ASC("X") PLAY "O4D" 
-50 IF K=ASC("C") PLAY "O4E" 
-60 IF K=ASC("V") PLAY "O4F" 
-70 IF K=ASC("B") PLAY "O4G" 
-80 IF K=ASC("N") PLAY "O4A" 
-90 IF K=ASC("M") PLAY "O4B" 
-100 IF K=ASC(",") PLAY "O5C"
-110 GOTO 20                
-</code>
-    </pre>
+<pre><code class="lang-ichigojam">10 'PIANO                   
+ 20 K=INKEY()                
+ 30 IF K=ASC("Z") PLAY "O4C" 
+ 40 IF K=ASC("X") PLAY "O4D" 
+ 50 IF K=ASC("C") PLAY "O4E" 
+ 60 IF K=ASC("V") PLAY "O4F" 
+ 70 IF K=ASC("B") PLAY "O4G" 
+ 80 IF K=ASC("N") PLAY "O4A" 
+ 90 IF K=ASC("M") PLAY "O4B" 
+ 100 IF K=ASC(",") PLAY "O5C"
+ 110 GOTO 20                
+</code></pre>
   </div>
 
   <div class="text-black text-xl font-bold bg-green-200 px-6 py-2">
-    <h2 class="text-red">コードの解説</h2><br>
+    <h2 class="text-red pb-2">コードの解説</h2>
     <div class="m-1">10行目　ファイルの名前</div>
     <div class="m-1">20行目　ボタンを押す設定</div>
     <div class="m-1">30行目　<span class="text-red">Z</span> ボタンに <span class="text-blue">ド</span></div>
@@ -96,23 +93,17 @@ layout: default
 
 # 次は IchigoJam でメロディーを奏でよう！
 
-<h2 class="text-4xl text-pink m-2">チューリップの歌</h2>
-<pre>
-<code class="lang-ichigojam">                                
-10 'Tulip Song                   
-20 PLAY "T180 CDER CDER GEDCDED"
-</code>
-</pre>
+<h2 class="text-4xl text-pink m-2 pt-4">チューリップの歌</h2>
+<pre><code class="lang-ichigojam">10 'Tulip Song                   
+ 20 PLAY "T180 CDER CDER GEDCDED"
+</code></pre>
 
-<h2 class="text-4xl text-yellow m-2">ジングルベル</h2>
-<pre>
-<code class="lang-ichigojam">                                                    
-10 'Jingle Bells Song                                
-20 PLAY "T360 O5 ER8ER8E2R ER8ER8E2R E.G.C2 D6E2.R8"
-</code>
-</pre>
+<h2 class="text-4xl text-yellow m-2 pt-4">ジングルベル</h2>
+<pre><code class="lang-ichigojam">10 'Jingle Bells Song                                
+ 20 PLAY "T360 O5 ER8ER8E2R ER8ER8E2R E.G.C2 D6E2.R8"
+</code></pre>
 
-<div class="text-center text-6xl text-black m-2">前奏やサビだけでなく、<br><span class="text-orange">他のところも作ってみよう！</span></div>
+<div class="text-center text-6xl text-black m-2 pt-4">前奏やサビだけでなく、<br><span class="text-orange">他のところも作ってみよう！</span></div>
 
 ---
 layout: cover
