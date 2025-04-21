@@ -1,7 +1,7 @@
 10 CLS:PRINT "ﾓｸﾞﾗ ﾀﾀｷ　　　　　　　　":gosub 810
 20 WAIT 360
 30 OUT 0:D=60:N=25:S=0
-40 X=RND(7)+1:LC 0,1:PRINT "SCORE : ";S;"       ":gosub 900
+40 X=RND(7)+1:LC 0,1:PRINT "SCORE : ";S;"       ":gosub 850
 50 IF N<=0 THEN LRUN 2
 60 IF (X%2)=0 OUT 1,0:GOTO 80
 70 BEEP 10,5:OUT 1,1:N=N-1
