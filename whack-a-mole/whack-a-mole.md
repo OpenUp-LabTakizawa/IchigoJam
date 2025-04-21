@@ -1,0 +1,84 @@
+<h1 align="center">whack-a-mole</h1>
+
+## Code0
+
+```
+1 @ARUN
+10 poke#70B,0,0,8,#FF,1,#20,4,3,2,#FF,0
+20 ifi2cw(98,#70B,1,#70C,1)+i2cw(98,#70D,1,#70E,1)+i2cw(98,#70F,1,#710,1)?"E"
+30 ifi2cw(98,#711,1,#714,1)+i2cw(98,#712,1,#714,1)+i2cw(98,#713,1,#714,1)?"E"
+40 LRUN 1
+```
+
+## Code1
+
+```
+10 CLS:PRINT "ﾓｸﾞﾗ ﾀﾀｷ　　　　　　　　":gosub 810
+15 WAIT 360
+20 OUT 0:D=60:N=25:S=0
+30 X=RND(7)+1:LC 0,1:PRINT "SCORE : ";S;"       ":gosub 900
+35 IF N<=0 THEN LRUN 2
+40 IF (X%2)=0 OUT 1,0:GOTO 60
+50 BEEP 10,5:OUT 1,1:N=N-1
+60 IF ((X/2)%2)=0 OUT 2,0:GOTO 80
+70 BEEP 12,5:OUT 2,1:N=N-1
+80 IF ((X/4)%2)=0 OUT 3,0:GOTO 100
+90 BEEP 15,5:OUT 3,1:N=N-1
+100 CLT
+110 IF (X%2)=0 GOTO 140
+120 IF IN(1) GOTO 140
+130 OUT 1,0:X=X&6:BEEP 10,20
+135 S=S+1:D=D-2
+140 IF ((X/2)%2)=0 GOTO 170
+150 IF IN(2) GOTO 170
+160 OUT 2,0:X=X&5:BEEP 12,20
+165 S=S+1:D=D-2
+170 IF ((X/4)%2)=0 GOTO 200
+180 IF IN(4) GOTO 200
+190 OUT 3,0:X=X&3:BEEP 15,20
+195 S=S+1:D=D-2
+200 IF TICK()<D GOTO 110
+210 OUT 0:WAIT D:GOTO 30
+800 'LCD
+810 poke#700,64,0,2,#C0,57,17,#70,86,#6C,56,12
+820 ifi2cw(62,#701,1,#704,5)?"E"
+830 wait12
+840 ifi2cw(62,#701,1,#709,2)?"E"
+900 wait10
+910 ifi2cw(62,#701,1,#702,1)+i2cw(62,#700,1,#900,16)+i2cw(62,#701,1,#703,1)+i2cw(62,#700,1,#920,16)?"E"
+920 return
+```
+
+## Code2
+
+```
+220 CLS:PRINT "GAME OVER       "
+230 gosub 900
+240 PLAY "O4T180"
+250 IF S<25 GOTO 290
+260 LC 0,1:PRINT "ｵﾐｺﾞﾄ!!         ":gosub 900
+265 gosub 970:wait60:gosub 960:wait60:gosub 940:wait60:LED1:IF BTN()=0 GOTO 265
+270 PLAY ">C<BAG>C<BAG>CED"
+280 GOTO 390
+290 IF S<20 GOTO 330
+300 LC 0,1:PRINT "ﾅｶﾅｶ ﾔﾙﾅ!       ":gosub 900:gosub 940
+310 PLAY "CEG>C"
+320 GOTO 390
+330 IF S<10 GOTO 370
+340 LC 0,1:PRINT "ﾏｱﾏｱ ｶﾅ?        ":gosub 900:gosub 960
+350 PLAY "AF"
+360 GOTO 390
+370 LC 0,1:PRINT "ｳｰﾑ ｻﾞﾝﾈﾝ       ":gosub 900:gosub 970
+380 PLAY "A"
+390 LED1:IF BTN()=0 GOTO 390
+400 LED0:LRUN 00
+900 wait10
+910 ifi2cw(62,#701,1,#702,1)+i2cw(62,#700,1,#900,16)+i2cw(62,#701,1,#703,1)+i2cw(62,#700,1,#920,16)?"E"
+920 return
+940 ifi2cw(98,#711,1,#715,1)+i2cw(98,#712,1,#715,1)+i2cw(98,#713,1,#714,1)?"E"
+945 return
+960 ifi2cw(98,#711,1,#715,1)+i2cw(98,#712,1,#714,1)+i2cw(98,#713,1,#715,1)?"E"
+965 return
+970 ifi2cw(98,#711,1,#714,1)+i2cw(98,#712,1,#715,1)+i2cw(98,#713,1,#715,1)?"E"
+975 return
+```
