@@ -22,15 +22,26 @@ You can try IchigoJam on the web console of [IchigoJam Web](https://fukuno.jig.j
 
 ### 💡 Example Code
 
+#### 1. Turn on LED
+
 ```
-# turn on LED
 LED1
+```
 
-# turn off LED
+#### 2. Turn off LED
+
+```
 LED0
+```
 
-# print random number
+#### 3. Print a random number
+
+```
 PRINT RND(10)
+```
+
+```
+# output
 8
 ```
 
