@@ -4,6 +4,9 @@ updates:
     directory: "/slidev/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "build"
+      include: "scope"
     groups:
       dependencies:
         patterns:
@@ -12,6 +15,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "ci"
     groups:
       ci:
         patterns:
