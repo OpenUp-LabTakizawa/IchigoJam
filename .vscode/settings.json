@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "**/.jj": true,
+    "**/.sl": true
+  }
+}
