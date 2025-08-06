@@ -1,25 +1,21 @@
-name: 📝 Check Conventional Commit
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+name: ✨ Check Conventional Commit Title
 
 on:
-  push:
   pull_request:
-  workflow_dispatch:
+    types:
+      - opened
+      - edited
+      - reopened
 
 permissions:
   contents: read
 
 jobs:
-  commitlint:
+  lint-title:
     runs-on: ubuntu-latest
     outputs:
       is_success: ${{ steps.commitlint.outputs.is_success }}
       commitlint_log: ${{ steps.commitlint.outputs.commitlint_log }}
-    if: startsWith(github.ref_name, 'sapling-pr-archive-') == false
-
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v4
@@ -36,19 +32,13 @@ jobs:
           echo 'export default { extends: ["@commitlint/config-conventional"],
           ignores: [(message: string) => message.includes("Signed-off-by: dependabot[bot]")] }' > commitlint.config.ts
 
-      - name: 👀 Validate current commit (last commit) with commitlint
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-        run: bun commitlint --last --verbose
-
-      - name: 👀 Validate PR commits with commitlint
+      - name: 👀 Validate PR title with commitlint
         if: github.event_name == 'pull_request'
         id: commitlint
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          TITLE: ${{ github.event.pull_request.title }}
         run: |
-          bun commitlint --from $BASE_SHA --to $HEAD_SHA --verbose \
-          &> >(tee -p commitlint.log) || STATUS=$?
+          echo "$TITLE" | bun commitlint --verbose &> >(tee -p commitlint.log) || STATUS=$?
           if [ $STATUS -ne 0 ]; then
             echo "is_success=false" >> $GITHUB_OUTPUT
           else
@@ -67,23 +57,24 @@ jobs:
 
   upload:
     runs-on: ubuntu-latest
-    needs: commitlint
-    if: (success() || failure()) && github.event_name == 'pull_request'
+    needs: lint-title
+    if: success() || failure()
 
     steps:
       - name: ❌ Create test failed comment
-        if: needs.commitlint.outputs.is_success == 'false'
+        if: needs.lint-title.outputs.is_success == 'false'
         env:
           ACTOR: ${{ github.actor }}
-          COMMITLINT_LOG: ${{ needs.commitlint.outputs.commitlint_log }}
+          COMMITLINT_LOG: ${{ needs.lint-title.outputs.commitlint_log }}
           REPO: ${{ github.repository }}
           RUN_ID: ${{ github.run_id }}
           SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           UUID=$(uuidgen)
           cat <<EOF_$UUID > comment.txt
-          # ❌ Commitlint Failed
-          @$ACTOR, your commit $SHA failed the commitlint check.
+          # ❌ Pull Request Title Linting Failed
+          @$ACTOR, thank you for opening this pull request 👋🏼
+          We require pull request titles to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) and it looks like your proposed title needs to be adjusted.
 
           <details>
           <summary><strong>Commitlint Log</strong></summary>
@@ -94,21 +85,21 @@ jobs:
 
           </details>
 
-          Please update the commit message to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
+          Please update the title of this pull request to follow the specification.
           👀[View in Actions](https://github.com/$REPO/actions/runs/$RUN_ID)
-          <!-- generated-comment [Commitlint](https://github.com/$REPO/.github/workflows/commitlint.yml) -->
+          <!-- generated-comment [Lint-Title](https://github.com/$REPO/.github/workflows/commitlint.yml) -->
           EOF_$UUID
 
       - name: ✅ Create test success comment
-        if: needs.commitlint.outputs.is_success == 'true'
+        if: needs.lint-title.outputs.is_success == 'true'
         env:
           REPO: ${{ github.repository }}
         run: |
           UUID=$(uuidgen)
           cat <<EOF_$UUID > comment.txt
-          # ✅ Commitlint Passed
-          Thank you for updating the commit message to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
-          <!-- generated-comment [Commitlint](https://github.com/$REPO/.github/workflows/commitlint.yml) -->
+          # ✅ Pull Request Title Linting Passed
+          Thank you for updating the title of this pull request to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
+          <!-- generated-comment [Lint-Title](https://github.com/$REPO/.github/workflows/commitlint.yml) -->
           EOF_$UUID
 
       - name: 🔢 Create pull request number and title
@@ -116,7 +107,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           echo "$PR_NUMBER" > pr_number.txt
-          echo "# ❌ Commitlint Failed" > title.txt
+          echo "# ❌ Pull Request Title Linting Failed" > title.txt
 
       - name: 🆙 Upload test comment
         uses: actions/upload-artifact@v4
