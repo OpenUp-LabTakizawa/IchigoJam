@@ -9,9 +9,15 @@
 🪸git:
 - changed-files:
   - any-glob-to-any-file: ['.gitattributes', '.gitignore']
+🎮game:
+- changed-files:
+  - any-glob-to-any-file: 'game/**'
 🕶️glass:
 - changed-files:
   - any-glob-to-any-file: 'glass/**'
+🧰infrastructure:
+- changed-files:
+  - any-glob-to-any-file: '.editorconfig'
 💡LED:
 - changed-files:
   - any-glob-to-any-file: 'LED/**'
