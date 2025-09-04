@@ -13,4 +13,4 @@ jobs:
 
     steps:
     - name: 🏷️ Labeling
-      uses: actions/labeler@v5
+      uses: actions/labeler@v6
