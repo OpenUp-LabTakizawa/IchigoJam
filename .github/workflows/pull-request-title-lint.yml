@@ -18,7 +18,7 @@ jobs:
       commitlint_log: ${{ steps.commitlint.outputs.commitlint_log }}
     steps:
       - name: 📥 Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           persist-credentials: false
